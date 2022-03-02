@@ -8,10 +8,12 @@ import { MaterialExampleModule } from 'src/material-modulte';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TablePaginationComponent } from './grid/table-pagination/table-pagination.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TablePaginationComponent
   ],
   imports: [
     BrowserModule,
