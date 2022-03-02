@@ -10,12 +10,16 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TablePaginationComponent } from './grid/table-pagination/table-pagination.component';
 import { DatosComponent } from './datos/datos.component';
+import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './grid/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TablePaginationComponent,
-    DatosComponent
+    DatosComponent,
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
