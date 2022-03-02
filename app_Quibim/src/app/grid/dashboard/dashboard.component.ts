@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
+import { HeaderComponent } from '../header/header.component';
+import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dataService: DataService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  this.dataService.getDataToday();
   }
 
 }

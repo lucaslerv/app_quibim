@@ -7,19 +7,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialExampleModule } from 'src/material-modulte';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { TablePaginationComponent } from './grid/table-pagination/table-pagination.component';
-import { DatosComponent } from './datos/datos.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './grid/dashboard/dashboard.component';
+import { MessageService } from './services/message.service';
+import { TodayComponent } from './grid/today/today.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TablePaginationComponent,
-    DatosComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    TodayComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +32,7 @@ import { DashboardComponent } from './grid/dashboard/dashboard.component';
     ReactiveFormsModule, 
     MaterialExampleModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

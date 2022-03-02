@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MessageService } from'../services/message.service';
 @Component({
   selector: 'app-messages',
   templateUrl: './messages.component.html',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessagesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 
   ngOnInit(): void {
+    this.messageService.add("prueba");
   }
 
 }
