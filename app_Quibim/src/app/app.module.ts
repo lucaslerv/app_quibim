@@ -1,3 +1,4 @@
+import { RestService } from './services/rest.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,19 +9,26 @@ import { MaterialExampleModule } from 'src/material-modulte';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
 import { MessagesComponent } from './messages/messages.component';
-import { DashboardComponent } from './grid/dashboard/dashboard.component';
 import { MessageService } from './services/message.service';
 import { TodayComponent } from './grid/today/today.component';
+import { HeaderComponent } from './grid/header/header.component';
+import { CardComponent } from './grid/card/card.component';
+import { DetailService } from './services/detail.service';
+import { ModalComponent } from './grid/modal/modal.component';
+import { PostDetailComponent } from './grid/post-detail/post-detail.component';
+import { HomeComponent } from './grid/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MessagesComponent,
-    DashboardComponent,
     TodayComponent,
+    HeaderComponent,
+    CardComponent,
+    ModalComponent,
+    PostDetailComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +40,7 @@ import { TodayComponent } from './grid/today/today.component';
     ReactiveFormsModule, 
     MaterialExampleModule
   ],
-  providers: [MessageService],
+  providers: [MessageService, RestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,7 +7,8 @@ import { DataService } from'../../services/data.service';
 })
 export class TodayComponent implements OnInit {
  today: any;
- 
+ birth: any;
+ death: any;
   constructor(public dataService: DataService) { }
 
   ngOnInit() {
