@@ -9,11 +9,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TablePaginationComponent } from './grid/table-pagination/table-pagination.component';
+import { DatosComponent } from './datos/datos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TablePaginationComponent
+    TablePaginationComponent,
+    DatosComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { TablePaginationComponent } from './grid/table-pagination/table-paginati
     FormsModule,
     HttpClientModule,
     MatNativeDateModule,
-    ReactiveFormsModule
+    ReactiveFormsModule, 
+    MaterialExampleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
